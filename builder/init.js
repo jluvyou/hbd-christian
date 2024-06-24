@@ -16,7 +16,7 @@ if (!process.env.PIC) throw new Error("Please specify PIC in environment.");
 const picPath = process.env.PIC;
 const msgPath = process.env.SCROLL_MSG;
 
-//Local initialization
+// Local initialization
 const setLocalData = async () => {
   try {
     const pic = path.join(__dirname, "../local/", picPath);
@@ -30,11 +30,12 @@ const setLocalData = async () => {
     await setPic(pic);
     genIndex(markup);
   } catch (e) {
+    console.error("Error during local initialization:", e.message);
     throw new Error(e.message);
   }
 };
 
-//Remote initialization
+// Remote initialization
 const setRemoteData = async () => {
   try {
     let res = await axios.get(picPath, {
@@ -56,6 +57,7 @@ const setRemoteData = async () => {
     await setPic(pic);
     genIndex(markup);
   } catch (e) {
+    console.error("Error during remote initialization:", e.message);
     throw new Error(e.message);
   }
 };
