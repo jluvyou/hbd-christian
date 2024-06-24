@@ -26,7 +26,7 @@ Check it out in this [sample deployment](https://hbd-card.netlify.app/) to see t
 
 ## Custom Happy BDay Text
 
-Instead of the predefined 'Wish you a very happy birthday' text in the card, one can add a custom hbd message by specifying it in the `HBD_MSG` environment variable.
+Instead of the predefined 'Wish you a very happy 18th birthday' text in the card, one can add a custom hbd message by specifying it in the `HBD_MSG` environment variable.
 
 ## Live only for a specific day
 

@@ -21,7 +21,7 @@ const genIndex = function (markup) {
     .replace("{{^SCROLL_MSG}}", markup)
     .replace(
       "{{^HBD_MSG}}",
-      process.env.HBD_MSG || "Wish you a very Happy Birthday"
+      process.env.HBD_MSG || "Wish you a very Happy 18th Birthday"
     )
     .replace("{{^NAME}}", process.env.NAME)
     .replace("{{^NICKNAME}}", process.env.NICKNAME || process.env.NAME);
